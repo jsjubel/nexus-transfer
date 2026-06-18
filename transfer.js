@@ -3,7 +3,7 @@ const { Web3 } = require('web3');
 const PRIVATE_KEY = '0x29380174ddcf9f375404467801eaef96b490ca59e31b73f6c188ede7c4257e57';
 const TO_ADDRESS = '0x555f5F46D04A27dB17D242aFedaAe268110b2880';
 const AMOUNT = '0.001';
-const INTERVAL_SECONDS = 3;
+const INTERVAL_SECONDS = 15; // ১৫ সেকেন্ড পর পর
 
 const RPC_URL = 'https://mainnet.rpc.nexus.xyz';
 const web3 = new Web3(RPC_URL);
@@ -36,5 +36,8 @@ async function transferNEX() {
     }
 }
 
+// প্রথমবার সাথে সাথে চালু করুন
 transferNEX();
+
+// প্রতি INTERVAL_SECONDS সেকেন্ড পর পর চালান
 setInterval(transferNEX, INTERVAL_SECONDS * 1000);
