@@ -1,0 +1,12 @@
+{
+  "name": "nexus-transfer",
+  "version": "1.0.0",
+  "description": "Auto NEX transfer bot",
+  "main": "transfer.js",
+  "scripts": {
+    "start": "node transfer.js"
+  },
+  "dependencies": {
+    "web3": "^4.0.0"
+  }
+}
